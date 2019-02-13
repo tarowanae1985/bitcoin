@@ -1,18 +1,17 @@
-// 今回はtestnetを使っていきます
-// PORT番号は適当です
-const NETWORK_TYPE = 'testnet';
-const PORT = '28332';
-
+// ライブラリ
 var bitcore = require('bitcore-lib');
 var explorers = require('bitcore-explorers');
 var Transaction = bitcore.Transaction;
 var insight = new explorers.Insight(NETWORK_TYPE);
 
-//送金元
+// 今回はtestnetを使っていきます
+const NETWORK_TYPE = 'testnet';
+
+//送金元アドレス
 var fromAddress = process.argv[2];
-//送金先
+//送金先アドレス
 var toAddress = process.argv[3];
-//送金元の秘密鍵
+//送金元アドレスの秘密鍵
 var privateKey = process.argv[4];
 
 insight.getUnspentUtxos(fromAddress, function(err, utxos) {
