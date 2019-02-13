@@ -1,11 +1,12 @@
 // ライブラリ
 var bitcore = require('bitcore-lib');
 var explorers = require('bitcore-explorers');
-var Transaction = bitcore.Transaction;
-var insight = new explorers.Insight(NETWORK_TYPE);
 
 // 今回はtestnetを使っていきます
 const NETWORK_TYPE = 'testnet';
+
+var Transaction = bitcore.Transaction;
+var insight = new explorers.Insight(NETWORK_TYPE);
 
 //送金元アドレス
 var fromAddress = process.argv[2];
