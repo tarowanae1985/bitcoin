@@ -1,10 +1,9 @@
+// ライブラリ
+var bitcore = require('bitcore-lib');
+
 // 今回はtestnetを使っていきます
 // PORT番号は適当です
 const NETWORK_TYPE = 'testnet';
-const PORT = '28332';
-
-// bitcore
-var bitcore = require('bitcore-lib');
 
 // routing設定
 // 秘密鍵の生成
