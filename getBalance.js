@@ -1,10 +1,11 @@
 // ライブラリ
 var bitcore = require('bitcore-lib');
 var explorers = require('bitcore-explorers');
-var insight = new explorers.Insight(NETWORK_TYPE);
 
 // 今回はtestnetを使っていきます
 const NETWORK_TYPE = 'testnet';
+
+var insight = new explorers.Insight(NETWORK_TYPE);
 
 // 引数(アドレス)の取得
 var address = process.argv[2];
