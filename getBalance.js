@@ -1,13 +1,12 @@
-// 今回はtestnetを使っていきます
-// PORT番号は適当です
-const NETWORK_TYPE = 'testnet';
-const PORT = '28332';
-
-// bitcore
+// ライブラリ
 var bitcore = require('bitcore-lib');
 var explorers = require('bitcore-explorers');
 var insight = new explorers.Insight(NETWORK_TYPE);
 
+// 今回はtestnetを使っていきます
+const NETWORK_TYPE = 'testnet';
+
+// 引数(アドレス)の取得
 var address = process.argv[2];
 
 // ビットコインアドレスの残高取得
